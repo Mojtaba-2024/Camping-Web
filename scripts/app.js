@@ -1,0 +1,17 @@
+const $ = document
+
+const navBtn = $.querySelector('.nav__btn')
+const navMenu = $.querySelector('.nav-menu')
+let navOpen = false
+
+navBtn.addEventListener('click', () => {
+    if (navOpen) {
+        navBtn.classList.remove('nav__btn--open')
+        navMenu.classList.remove('nav-menu--open')
+        navOpen = false
+    } else {
+        navBtn.classList.add('nav__btn--open')
+        navMenu.classList.add('nav-menu--open')
+        navOpen = true
+    }
+})
